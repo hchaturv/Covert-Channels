@@ -1,0 +1,44 @@
+Binary file ./.main.c.swp matches
+./binding.c:55:	signal(SIGTSTP, inc_destparm);
+./docs/french/NEWS:150:  erreur SIGBUS sur sparc.
+./lib/regtest/rt0.htcl:1:# SIGSEGV due to ipopt compilation bug: the padding code didn't set realloc()
+./main.c:297:	/* use SIGALRM to send packets like ping do */
+./main.c:298:	Signal(SIGALRM, send_packet);
+./main.c:301:	if (ctrlzbind != BIND_NONE) Signal(SIGTSTP, inc_destparm);
+./main.c:302:	Signal(SIGINT, print_statistics);
+./main.c:303:	Signal(SIGTERM, print_statistics);
+./main.c:371:	kill(getpid(), SIGALRM);
+./parseoptions.c:28:	OPT_KEEP, OPT_FILE, OPT_DUMP, OPT_PRINT, OPT_SIGN, OPT_LISTEN,
+./parseoptions.c:83:	{ 'e',	"sign",		OPT_SIGN,		AGO_NEEDARG|AGO_EXCEPT0 },
+./parseoptions.c:406:		case OPT_SIGN:
+./RFCs/rfc1063.txt:597:        Harmful", Proc. ACM SIGCOMM '87, Stowe, VT, August 1987.
+./RFCs/rfc1072.txt:805:      in Reliable Transport Protocols", Proc. SIGCOMM '87, Stowe, VT,
+./RFCs/rfc1072.txt:816:      published in ACM SIGCOMM Comp Comm Review, vol. 15, no. 5,
+./RFCs/rfc1072.txt:830:      be presented at SIGCOMM '88, Stanford, CA., August 1988.
+./RFCs/rfc1072.txt:841:      SIGCOMM '86, Stowe, Vt., August 1986.
+./RFCs/rfc1122.txt:6694:     SIGCOMM-87, August 1987.  Published as ACM Comp Comm Review, Vol.
+./RFCs/rfc1122.txt:6769:     SIGCOMM-87, August 1987.
+./RFCs/rfc1122.txt:6772:[TCP:7] "Congestion Avoidance and Control," V. Jacobson, ACM SIGCOMM-88,
+./RFCs/rfc1323.txt:1394:      SIGCOMM '88, Stanford, CA., August 1988.
+./RFCs/rfc1323.txt:1422:      in Reliable Transport Protocols", Proc. SIGCOMM '87, Stowe, VT,
+./RFCs/rfc1323.txt:1433:      published in ACM SIGCOMM Comp Comm Review, vol. 15, no. 5,
+./RFCs/rfc1323.txt:1448:      SIGCOMM '86, Stowe, Vt., August 1986.
+./RFCs/rfc1812.txt:7542:        SIGCOMM '88, Association for Computing Machinery, August 1988.
+./RFCs/rfc1812.txt:7557:        Modeling", short version in SIGCOMM '94.
+./RFCs/rfc1812.txt:7569:        of Ethernet Traffic", Proceedings of SIGCOMM '93, September,
+./RFCs/rfc1812.txt:7574:        SIGCOMM 91, pages 3-16
+./RFCs/rfc1812.txt:7584:        In Proceedings of ACM SIGCOMM 1994, pages 20-31, San Francisco,
+./RFCs/rfc2018.txt:591:   Proceedings of SIGCOMM '88, Stanford, CA., August 1988.
+./RFCs/rfc793.txt:2989:        which a SEND later elicits some kind of SIGNAL or
+./scan.c:542:		Signal(SIGCHLD, do_exit);
+./scan.c:543:		Signal(SIGINT, do_exit);
+./scan.c:544:		Signal(SIGTERM, do_exit);
+./scan.c:547:		Signal(SIGINT, do_exit);
+./scan.c:548:		Signal(SIGTERM, do_exit);
+./send.c:66:/* The signal handler for SIGALRM will send the packets */
+./send.c:82:	Signal(SIGALRM, send_packet);
+./send.c:85:		//Signal(SIGALRM, print_statistics);
+./sendhcmp.c:16:#include <signal.h> /* SIGALARM macro */
+./sendhcmp.c:48:	kill(getpid(), SIGALRM); /* send hcmp */
+./signal.c:16:	if (signo == SIGALRM)
+./signal.c:29:		return SIG_ERR;

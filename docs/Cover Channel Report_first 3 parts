@@ -1,0 +1,48 @@
+Abstract
+Cloud computing is becoming increasingly popular because of its tremendous advantages like dynamic deployments, 
+multitenancy(the ability to share resources among different cloud consumers), rapid elasticity(to scale rapidly 
+outward and inward commensurate with demand) and data confidentiality is protected by the cloud provider with 
+the virtualization technology. However, a covert channel can break the isolation of the virtualization platform 
+and leak confidential information. Any shared resource can potentially be used as a covert channel. In this paper, 
+a covert channel experiment is designed and implemented on cloudlab between two co-resident VMs which rely on 
+shared disk storage. The covert channel exploits the shared disk and constraints I/O bandwidth as designed. 
+The result of covert channel experiments clearly shows information communicated between co-resident VMs by sending 
+0 and 1 bit information continuously and the sender reads from random locations on a shared disk volume. Meanwhile, 
+implementation problems like noise are explored associated with covert channels.
+
+
+Introduction
+The fundamental mechanism of cloud is virtualization, allowing virtual machines (VMs) to instantiate stand-alone 
+operating systems (OSs) on demand on the basis of a software layer.Although the virtualization technology provides 
+strong isolation for the cloud, vulnerabilities on security and privacy still exist on cloud. Covert channel is one 
+of main threats to the multi-level secure systems. It is a leakage mechanism used to transfer confidential information 
+violating security policies specified by the information systems while cover channel itself is not an actual attack. 
+The purpose of the paper is to implement covert channel on cloudlab and to evaluate the track records. Finally, the 
+effectiveness of covert channel is evaluated by sending a message between two VMs running on CloudLab. Via measurer 
+and profiler during the experiment, profiling is done by using ping response time.
+
+
+Methodology
+In this paper, we implement covert channel on host network interface. First, both VMs profile the normal load of the 
+host network interface and are working fine. After a pre-defined period of time, one of the VMs start to overload the 
+host network interface by sending continuous information. At the same time, the other VM start to profile the host 
+network interface. Based on different response time, displacement of loads can be judged. For load higher than normal 
+load, 1 bit information will be sent to profiler and for others, 0 bit information will be sent to profiler(sender 
+need not do anything). In addition, both VMs should start at the same time and covert channel must be able to determine 
+the start of a message and "synchronize" the VMs. A specific pattern at the start of the message is to be implemented so 
+that the receiving VM knows that everything that follows is the message. And a predefined sequence of digits is sent to 
+inform the receiver that it is the beginning of a secret message not an ordinary frame. Through collected information 
+from profiler, we are able to profile the network interface. 
+
+
+
+Design of Experiment
+
+
+
+Deployment of Experiment
+
+
+
+Conclusion
+

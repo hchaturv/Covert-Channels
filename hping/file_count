@@ -1,0 +1,175 @@
+Binary file ./.rtt.c.swp matches
+./1:155:	/* if the count was reached exit now */
+./1:156:	if (count != -1 && count == recv_pkt)
+./1:538:        deltanum = 0; /* reset the counter anyway */
+./1:711:	int count = 0;
+./1:715:		count++;
+./1:717:		if (count % 2 == 0) printf(" ");
+./1:718:		if (count % 16 == 0) printf("\n\t\t");
+./1:726:	int count = 0;
+./1:730:		count ++;
+./1:735:		if (count % 32 == 0) printf("\n\t\t");
+./adbuf.c:157:/* cut the buffer to 'count' bytes on the right. If the used buffer is
+./adbuf.c:158: * already smaller than 'count' no operation is performed.
+./adbuf.c:161:int adbuf_cut(struct adbuf *b, size_t count)
+./adbuf.c:167:	if (count >= adbuf_used(b))
+./adbuf.c:169:	count++; /* preserve space for the nul term */
+./adbuf.c:170:	t = realloc(b->buf, count);
+./adbuf.c:173:	t[count-1] = '\0';
+./adbuf.c:175:	b->size = count;
+./adbuf.c:180:/* discard count characters on the left */
+./adbuf.c:181:int adbuf_ltrim(struct adbuf *b, size_t count)
+./adbuf.c:188:	if (count == 0) /* nothing to trim */
+./adbuf.c:192:	if (count >= adbuf_used(b))
+./adbuf.c:194:	newlen = adbuf_used(b)-count;
+./adbuf.c:198:	memcpy(t, adbuf_ptr(b)+count, newlen);
+./adbuf.c:207:/* discard count caracters on the right */
+./adbuf.c:208:int adbuf_rtrim(struct adbuf *b, size_t count)
+./adbuf.c:210:	return adbuf_cut(b, adbuf_used(b)-count);
+./adbuf.h:37:int adbuf_cut(struct adbuf *b, size_t count);
+./adbuf.h:38:int adbuf_ltrim(struct adbuf *b, size_t count);
+./adbuf.h:39:int adbuf_rtrim(struct adbuf *b, size_t count);
+./apd.c:760:	} else if (strcasecmp(f, "hopcount") == 0) {
+./apd.c:761:		entry->hopcount = ars_atou(v);
+./ars.h:174:#define ARS_ICMP_EXC_TTL		0       /* TTL count exceeded */
+./ars.h:341:	__u8	hopcount;
+./COPYING:180:access to copy the source code from the same place counts as
+./COPYING:242:certain countries either by patents or by copyrighted interfaces, the
+./COPYING:245:those countries, so that distribution is permitted only in or among
+./COPYING:246:countries not thus excluded.  In such case, this License incorporates
+./docs/API.txt:90:  hping recv ?-hexdata? <interface> ?timeout? ?count?
+./docs/API.txt:100:(optional) ?count? parameter can be specified, modifing the recv
+./docs/API.txt:101:subcommand behaviour to return as soon as ?count? packets were
+./docs/API.txt:102:already received. A special ?count? value of zero means
+./docs/API.txt:111:For default the timeout is set to -1, and count to 1 (in other
+./docs/french/hping2-fr.8:11:.I count
+./docs/french/hping2-fr.8:160:.I -c --count count
+./docs/french/hping2-fr.8:162:.I count
+./docs/french/hping2-fr.8.txt:8:       hping2 [ -hvnqVDzZ012WrfxykQbFSRPAUXYjJBuTG ] [ -c count ]
+./docs/french/hping2-fr.8.txt:69:       -c --count count
+./docs/hping2.8:10:.I count
+./docs/hping2.8:156:.I -c --count count
+./docs/hping2.8:158:.I count
+./docs/hping3.8:10:.I count
+./docs/hping3.8:158:.I -c --count count
+./docs/hping3.8:160:.I count
+./docs/MORE-FUN-WITH-IPID:8:The first is about linux firewalling: since it increase IP ID global counter
+./globals.h:104:		count,
+./hex.c:45:		return 1; /* error, odd count */
+./hping2.h:114:#define DEFAULT_COUNT      -1	/* default packets count: -1 means forever */
+./hping2.h:248:#define ICMP_EXC_TTL            0       /* TTL count exceeded           */
+./lib/ciscoios.htcl:74:	puts "Usage: hping exec countops.htcl targethost"
+./lib/ciscoios0.htcl:74:	puts "Usage: hping exec countops.htcl targethost"
+./lib/nat-noise.htcl:221:proc mod_shuffle {count timeout tag packets} {
+./lib/nat-noise.htcl:236:	if {$len >= $count} {
+./lib/nat-noise.htcl:253:proc mod_tcp_daytona_dupack {count packets} {
+./lib/nat-noise.htcl:257:			for {set i 0} {$i < $count} {incr i} {
+./main.c:125:	count		= DEFAULT_COUNT,
+./parseoptions.c:42:	{ 'c',	"count",	OPT_COUNT,		AGO_NEEDARG },
+./parseoptions.c:237:			count = strtol(ago_optarg, NULL, 0);
+./parseoptions.c:610:	else if (count <= 0 && count != -1) {
+./parseoptions.c:611:		printf("Option error: count must > 0\n");
+./rapd.c:406:	adbuf_printf(dest, "hopcount=%u", entry->hopcount);
+./RFCs/rfc1072.txt:41:   for example, a cross-country delay of 30 ms at a DS3 bandwidth
+./RFCs/rfc1072.txt:238:      *    Two window shift counts are added to the connection state:
+./RFCs/rfc1072.txt:239:           snd.scale and rcv.scale.  These are shift counts to be
+./RFCs/rfc1072.txt:291:      Since the max window is 2**S (where S is the scaling shift count)
+./RFCs/rfc1072.txt:294:      count must be limited to 14.  (This allows windows of 2**30 = 1
+./RFCs/rfc1122.txt:759:         known failure.  It may be useful to filter and count duplicate
+./RFCs/rfc1122.txt:761:         (1) always count abnormalities and make such counts accessible
+./RFCs/rfc1122.txt:1674:      the event in a statistics counter.
+./RFCs/rfc1122.txt:1994:                 count, since each gateway is required to reduce the TTL
+./RFCs/rfc1122.txt:2980:                 use count, or a last-used timestamp, for example.  It
+./RFCs/rfc1122.txt:3348:              a simple hop count rather than an elapsed time.  If the
+./RFCs/rfc1122.txt:4219:   Record in counter                             |3.1     | |x| | | |
+./RFCs/rfc1122.txt:5564:                 counts the number of times an ACK has been received
+./RFCs/rfc1122.txt:5880:                 as a count of retransmissions.
+./RFCs/rfc1122.txt:6167:                      space that counted only segments.
+./RFCs/rfc1323.txt:106:      example, a cross-country delay of 30 ms at a DS3 bandwidth
+./RFCs/rfc1323.txt:515:      *    The connection state is augmented by two window shift counts,
+./RFCs/rfc1323.txt:571:      Since the max window is 2**S (where S is the scaling shift count)
+./RFCs/rfc1323.txt:574:      count must be limited to 14 (which allows windows of 2**30 = 1
+./RFCs/rfc1812.txt:765:   It may be useful to filter and count duplicate successive messages.
+./RFCs/rfc1812.txt:768:   o Always count abnormalities and make such counts accessible through
+./RFCs/rfc1812.txt:2174:   contents of the silently discarded datagram, and SHOULD count
+./RFCs/rfc1812.txt:2558:   has some attributes of a hop-count, since each router is required to
+./RFCs/rfc1812.txt:2736:   router discards, the datagram discard SHOULD be counted.
+./RFCs/rfc1812.txt:4720:   the TTL is effectively a hop count limit on how far a datagram can
+./RFCs/rfc1812.txt:4740:      count limit and a time limit.  Its hop count function is critical
+./RFCs/rfc1812.txt:4745:      a pure hop count, and in parts of the Internet community there is
+./RFCs/rfc1812.txt:4768:      work as expected unless the TTL is treated as a pure hop count.
+./RFCs/rfc1812.txt:5169:   As was described in Section [4.2.3.1], a router may encounter certain
+./RFCs/rfc1812.txt:5470:   The router SHOULD count and SHOULD allow selective logging of packets
+./RFCs/rfc1812.txt:5638:      silently dropped and a counter should note the number of packets
+./RFCs/rfc1812.txt:6794:   facilities to assist network managers in securing and accounting for
+./RFCs/rfc1812.txt:7343:      (2) Packet Accounting
+./RFCs/rfc1812.txt:7376:           if present, logging or counting them internally, or logging
+./RFCs/rfc1812.txt:8416:        statistics counter.
+./RFCs/rfc1812.txt:8465:        packet is considered valid.  It is a combination hop count and
+./RFCs/rfc1812.txt:9422:           account for the fact that the first time the ifcounter is
+./RFCs/rfc1812.txt:9427:      In The value to set ifcounter to when a destination is newly
+./RFCs/rfc1812.txt:9433:      - Associated with each destination is a counter, called the
+./RFCs/rfc1812.txt:9434:         ifcounter below.  Poison reverse is done for any route whose
+./RFCs/rfc1812.txt:9435:         destination's ifcounter is greater than zero.
+./RFCs/rfc1812.txt:9438:         update is sent, all the non-zero ifcounters are decremented by
+./RFCs/rfc1812.txt:9441:      - When a route to a destination is created, its ifcounter is set
+./RFCs/rfc1812.txt:9446:            ifcounter is set to Ul.
+./RFCs/rfc1812.txt:9450:            ifcounter is set to MAX(0, Ul - INT(seconds that the route
+./RFCs/rfc1812.txt:9454:            ifcounter is set to In.
+./RFCs/rfc1812.txt:9456:         - Otherwise, the ifcounter is set to zero
+./RFCs/rfc1812.txt:9460:         expired (regardless of the ifcounter values).
+./RFCs/rfc1812.txt:9477:      - The rules which set the ifcounter to non-zero values are changed
+./RFCs/rfc1812.txt:9653:   To do our country loss; and if to live,
+./RFCs/rfc2236.txt:178:   document.  Timer and counter names appear in square brackets.
+./RFCs/rfc2460.txt:233:                        in the length count.)
+./RFCs/rfc2460.txt:355:   ICMP Code value of 1 ("unrecognized Next Header type encountered")
+./RFCs/rfc2460.txt:358:   a node encounters a Next Header value of zero in any header other
+./RFCs/rfc2460.txt:664:   If, while processing a received packet, a node encounters a Routing
+./RFCs/rfc2460.txt:1021:        bit, "wrap-around" counter, incremented each time a packet must
+./RFCs/rfc2460.txt:1023:        maintain a single counter for the node or multiple counters,
+./RFCs/rfc2460.txt:1559:   data, an upper-layer protocol must take into account the larger size
+./RFCs/rfc2460.txt:2062:        Next Header type encountered" in an ICMP Parameter Problem
+./RFCs/rfc2460.txt:2068:        length count.
+./RFCs/rfc791.txt:1084:    The option-length octet counts the option-type octet and the
+./RFCs/rfc791.txt:1493:        The Option Length is the number of octets in the option counting
+./RFCs/rfc791.txt:1543:        timestamp, but the overflow count is incremented by one.
+./RFCs/rfc791.txt:1546:        to be inserted, or the overflow count itself overflows, the
+./RFCs/rfc791.txt:1644:    datagram.  Fragments are counted in units of 8 octets.  The
+./RFCs/rfc791.txt:1663:    datagram total length field (of course, the header is counted in the
+./RFCs/rfc793.txt:1201:      computed), and it does not count the 12 octets of the pseudo
+./RFCs/rfc793.txt:1224:    The option-length counts the two octets of option-kind and
+./RFCs/rfc793.txt:1669:              (counting SYN and FIN)
+./RFCs/rfc793.txt:2305:  A variety of other cases are possible, all of which are accounted for
+./RFCs/rfc793.txt:2921:        count, PUSH flag, URGENT flag [,timeout])
+./RFCs/rfc793.txt:3021:        count) -> byte count, urgent flag, push flag
+./RFCs/rfc793.txt:3057:        count indicating the actual length of the data received.
+./RFCs/rfc793.txt:3176:        Byte count (counts bytes received)       Receive
+./RFCs/rfc950.txt:390:      function, so that it too takes the subnet field bits into account
+./rtt.c:21:	static int count =0;
+./rtt.c:23:	if(count <50)
+./rtt.c:25:		rtt_med[count]=rtt;
+./rtt.c:26:		count++;
+./rtt.c:32:	static int count =0;
+./rtt.c:34:	if(count <= 999)
+./rtt.c:36:		rtt_arr[count]=rtt;
+./rtt.c:37:		count++;
+./rtt.c:39:	if(count == 1000)
+./rtt.c:47:	static int avg_counter = 0;
+./rtt.c:54:	avg_counter++;
+./rtt.c:55:	rtt_avg = (rtt_avg*(avg_counter-1)/avg_counter)+(ms_delay/avg_counter);
+./scan.c:59:int avrgcount = 0;
+./scan.c:415:			avrgcount++;
+./scan.c:416:			avrgms = (avrgms*(avrgcount-1)/avrgcount)+(rttms/avrgcount);
+./send.c:84:	if (count != -1 && count == sent_pkt) { /* count reached? */
+./strlcpy.c:79:        return(s - src - 1);    /* count does not include NUL */
+./usage.c:22:"  -c  --count     packet count\n"
+./waitpacket.c:155:	/* if the count was reached exit now */
+./waitpacket.c:156:	if (count != -1 && count == recv_pkt)
+./waitpacket.c:538:        deltanum = 0; /* reset the counter anyway */
+./waitpacket.c:711:	int count = 0;
+./waitpacket.c:715:		count++;
+./waitpacket.c:717:		if (count % 2 == 0) printf(" ");
+./waitpacket.c:718:		if (count % 16 == 0) printf("\n\t\t");
+./waitpacket.c:726:	int count = 0;
+./waitpacket.c:730:		count ++;
+./waitpacket.c:735:		if (count % 32 == 0) printf("\n\t\t");
